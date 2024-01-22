@@ -28,7 +28,7 @@ public class SecurityConfig {
 
 		// Aggiungere/Rimuovere regole di protezione su singoli endpoint
 		// in maniera che venga/non venga richiesta l'autenticazione per accedervi
-		httpSecurity.authorizeHttpRequests(request -> request.requestMatchers("/auth/**").permitAll());
+		httpSecurity.authorizeHttpRequests(request -> request.requestMatchers("/**").permitAll());
 
 		return httpSecurity.build();
 	}
